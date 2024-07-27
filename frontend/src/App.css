@@ -1,0 +1,197 @@
+body {
+  font-family: 'Roboto', sans-serif; /* Updated default font */
+  background-color: #f5f5f5; /* Light mode background color */
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease; /* Add transition for smooth change */
+}
+
+.dark-mode body {
+  background-color: #222; /* Dark mode background color */
+  color: #fff; /* Light text color for dark background */
+}
+
+.container {
+  width: 85%; /* Increased width */
+  max-width: 1400px; /* Increased maximum width */
+  margin: 40px auto;
+  background-color: white;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.90); /* Added box shadow */
+  border-radius: 20px; /* Increased border radius */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 90vh;
+}
+
+.header {
+  background-color: #0a0a0a; /* Light mode header background color */
+  color: white;
+  padding: 20px;
+  text-align: center;
+  display: flex; /* Flexbox for better layout */
+  justify-content: space-between; /* Align header content */
+  align-items: center; /* Center vertically */
+  font-family: 'Poppins', sans-serif; /* Header font */
+}
+
+.dark-mode .header {
+  background-color: #efefe9; /* Dark mode header background color */
+  color: #090000; /* Light text color for dark background */
+}
+
+.header h1 {
+  font-size: 1.4rem; /* Larger font size for title */
+  margin: 0;
+  font-weight: 700; /* Bold weight for title */
+}
+
+.dark-mode .header h1 {
+  color: #090000; /* Dark mode title color */
+}
+
+.dark-mode-toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px; /* Adjust width as needed */
+  height: 28px; /* Adjust height as needed */
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 15px; /* Rounded corners */
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #bfc6bf; /* Green background for the switch */
+}
+
+input:checked + .slider:before {
+  transform: translateX(22px); /* Move the slider knob */
+}
+
+.slider.round {
+  border-radius: 34px; /* Round slider */
+}
+
+.slider.round:before {
+  border-radius: 50%; /* Round knob */
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  background-color: #fff; /* Light mode content background color */
+
+  /* Adjust layout for smaller screens */
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dark-mode .main-content {
+  background-color: #303030; /* Dark mode content background color */
+}
+
+.chart-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .chart-container {
+  background-color: #404040; /* Dark mode chart container background color */
+  border: 1px solid #555; /* Light border for dark background */
+}
+
+.chart-container.full-width {
+  grid-column: 1 / span 2;
+
+  /* Adjust for smaller screens */
+  @media (max-width: 768px) {
+    grid-column: auto; /* Remove full-width behavior */
+  }
+}
+
+.chart-container h2 {
+  margin-bottom: 10px;
+  color: #333; /* Light mode header color */
+}
+
+.dark-mode .chart-container h2 {
+  color: #fff; /* Light text color for dark background */
+}
+
+.chart-container label {
+  font-weight: bold;
+  color: #333; /* Light mode label color */
+}
+
+.dark-mode .chart-container label {
+  color: #fff; /* Light text color for dark background */
+}
+
+.chart-container select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.footer {
+  background-color: #f1f1f1; /* Light mode footer background color */
+  color: #333;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.dark-mode .footer {
+  background-color: #1a1a1a; /* Dark mode footer background color */
+  color: #ccc; /* Light text color for dark background */
+}
+
+.heart-symbol {
+  color: #e74c3c; /* Red color for the heart symbol */
+  font-size: 16px; /* Adjust size as needed */
+  vertical-align: middle; /* Align heart with text */
+}
