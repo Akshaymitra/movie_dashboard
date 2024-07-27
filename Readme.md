@@ -7,7 +7,7 @@ This project is a Movie Statistics Dashboard that displays top grossing, top rat
 
 ### Data Preprocessing
 
-- **Docker**: Containerization platform
+- **Pandas**: Data processing library in python .
 
 ### Frontend
 
