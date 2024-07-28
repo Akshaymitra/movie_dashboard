@@ -1,4 +1,3 @@
-
 # Movie Statistics Dashboard
 
 This project is a Movie Statistics Dashboard that displays top grossing, top rated, and top voted movies. The stack includes a Django backend and a React frontend.
@@ -47,7 +46,6 @@ git clone https://github.com/Akshaymitra/movie_dashboard.git
 cd movie_dashboard
 ```
 
-
 ### 2. Build and run the stack using the following command :
 
 ```sh
@@ -60,14 +58,12 @@ This command will:
 * Build the Docker images if there are any changes
 * Start the backend and frontend containers in daemon mode .
 
-
 ### 3. Access the Application
 
 Once the containers are up and running, you can access the application in your browser:
 
 * Frontend: [http://localhost](http://localhost)
 * Backend: [http://localhost:8001](http://localhost:8001)
-
 
 ### 4. API Endpoints
 
@@ -78,13 +74,11 @@ The backend provides the following API endpoints:
 * `/api/top-voted-movies/`
 * `/api/available-years/`
 
-
 ### 5. Stopping the Application
 
 ```sh
 docker compose down
 ```
-
 
 ### 6. Important Guidelines
 
@@ -92,7 +86,7 @@ docker compose down
 - This manual assumes that Docker and Docker Compose are installed in the respective machine .
 - If using Ubuntu or any Debian distribution , consider using the bash commands using sudo to prevent permission denial for any command .
 
-### 7. Sample Screenshots 
+### 7. Sample Screenshots
 
 ![1722105591425](image/Readme/1722105591425.png)
 
