@@ -3,11 +3,13 @@ FROM python:3.9-slim
 
 WORKDIR /app
 
-COPY ../requirements.txt requirements.txt
+# Copy the requirements.txt file from the parent directory
+COPY requirements.txt .
 RUN pip install -r requirements.txt
 
-COPY . .
+# Copy the rest of the application code
+COPY backend/ .
 
-EXPOSE 8000
+EXPOSE 8001
 
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8001"]

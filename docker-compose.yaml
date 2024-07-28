@@ -3,10 +3,11 @@ version: '3.8'
 services:
   backend:
     container_name: backend_container
-    image: akshaymitra/movies_dashboard_backend
+    #image: akshaymitra/movies_dashboard_backend
     # Uncomment the following lines to build the backend image locally
-    # build:
-    #   context: ./movies_dashboard
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
     ports:
       - "8001:8001"
     networks:
@@ -14,12 +15,12 @@ services:
 
   frontend:
     container_name: frontend_container
-    image: akshaymitra/movies_dashboard_frontend
+    #image: akshaymitra/movies_dashboard_frontend
     depends_on:
       - backend
     # Uncomment the following lines to build the frontend image locally
-    # build:
-    #   context: ./movies-dashboard-frontend
+    build:
+      context: ./frontend
     ports:
       - "80:80"
     networks:
