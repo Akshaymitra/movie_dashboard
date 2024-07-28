@@ -50,14 +50,14 @@ cd movie_dashboard
 ### 2. Build and run the stack using the following command :
 
 ```sh
-docker compose up --build
+docker compose up --build -d
 ```
 
 This command will:
 
 * Pull the necessary images
 * Build the Docker images if there are any changes
-* Start the backend and frontend containers
+* Start the backend and frontend containers in daemon mode .
 
 
 ### 3. Access the Application
